@@ -1,0 +1,15 @@
+xmodmap -e "keycode 135=b"
+xmodmap -e "keycode 105=n"
+xmodmap -e "keycode 49=asciitilde"
+xmodmap -e "keycode 69  = numbersign"
+xmodmap -e "keycode 70  = braceleft"
+xmodmap -e "keycode 71  = bracketleft"
+xmodmap -e "keycode 72  = bar"
+xmodmap -e "keycode 74  = backslash"
+xmodmap -e "keycode 76  = at"
+xmodmap -e "keycode 95  = bracketright"
+xmodmap -e "keycode 96  = braceright"
+xmodmap .Xmodmap
+xmodmap -pke|egrep  -e '(F9|Print)'
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
